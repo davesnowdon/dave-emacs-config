@@ -1,4 +1,5 @@
 ;; Minimal UI
+;; From https://dev.to/huytd/emacs-from-scratch-1cg6
 ;(scroll-bar-mode -1)  - I like have scroll bars
 (tool-bar-mode   -1)
 (tooltip-mode    -1)
@@ -9,6 +10,7 @@
       inhibit-startup-echo-area-message t) 
 
 ;; Package configs
+;; From https://dev.to/huytd/emacs-from-scratch-1cg6
 (require 'package)
 (setq package-enable-at-startup nil)
 (setq package-archives '(("org"   . "http://orgmode.org/elpa/")
@@ -23,6 +25,7 @@
 (require 'use-package)
 
 ;; Theme
+;; From https://dev.to/huytd/emacs-from-scratch-1cg6
 (use-package doom-themes
   :ensure t
   :init
@@ -34,6 +37,7 @@
   (doom-themes-org-config))
 
 ;; which key - https://github.com/justbur/emacs-which-key
+;; From https://sam217pa.github.io/2016/08/30/how-to-make-your-own-spacemacs/
 (use-package which-key
   :ensure t
   :init
@@ -49,6 +53,7 @@
 ;; uses ivy for completion.
 ;; Counsel takes this further, providing versions of common Emacs commands
 ;; that are customised to make the best use of ivy.
+;; From https://sam217pa.github.io/2016/08/30/how-to-make-your-own-spacemacs/
 (use-package ivy :ensure t
   :diminish (ivy-mode . "") ; does not display ivy in the modeline
   :init (ivy-mode 1)        ; enable ivy globally at startup

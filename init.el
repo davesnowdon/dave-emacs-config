@@ -6,6 +6,7 @@
 (menu-bar-mode   -1)
 
 ;; Emacs by default will pester you with a splash screen and a message in the echo area. To disable both, and have emacs default to its *scratch* buffer,
+;; From https://www.masteringemacs.org/article/beginners-guide-to-emacs
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t) 
 

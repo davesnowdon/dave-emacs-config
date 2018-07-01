@@ -15,7 +15,9 @@
 (setq package-enable-at-startup nil)
 (setq package-archives '(("org"   . "http://orgmode.org/elpa/")
                          ("gnu"   . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
+                         ("melpa" . "https://melpa.org/packages/")
+;			 ("melpa-stable" . "https://stable.melpa.org/packages/")
+			 ))
 (package-initialize)
 
 ;; Bootstrap `use-package`
@@ -75,3 +77,23 @@
    ("C-c /"   . counsel-ag)        ; search for regexp in git repo using ag
    ("C-c l"   . counsel-locate))   ; search for files or else using locate
   )
+
+;; CIDER for clojure development https://cider.readthedocs.io/en/latest/
+;; Use the stable version of CIDER
+(use-package cider
+  :ensure t
+;  :pin melpa-stable
+  )
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (cider which-key use-package doom-themes counsel))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
